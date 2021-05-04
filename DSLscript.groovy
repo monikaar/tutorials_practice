@@ -2,7 +2,7 @@ job('Maven project via DSL') {
 	description('Maven job created via Jenkins DSL')
 	
 	scm {
-		github("https://github.com/monikaar/tutorials_practice.git", 'main')
+		github("monikaar/tutorials_practice", 'main')
 	}
 
 	triggers {
