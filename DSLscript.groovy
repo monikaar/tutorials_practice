@@ -1,6 +1,6 @@
 job('Maven project via DSL') {
 	description('Maven job created via Jenkins DSL')
-	}
+	
 	scm {
 		github("https://github.com/monikaar/tutorials_practice.git", 'main')
 	}
@@ -16,3 +16,5 @@ job('Maven project via DSL') {
 		//archive the atifacts
 		archiveArtifacts('**/*.jar')
 	}
+	
+}
