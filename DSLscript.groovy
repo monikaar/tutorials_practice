@@ -6,7 +6,7 @@ job('Maven project via DSL') {
 	}
 
 	triggers {
-		githubpush('* * * * *')
+		scm('* * * * *')
 	}
 	steps {
 		maven('clean package', 'maven-samples/single-module/pom.xml')
