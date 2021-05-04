@@ -1,5 +1,5 @@
 job('Maven project via DSL')
-	description("Mave job created via Jenkins DSL on ${new Date()}")
+	description('Maven job created via Jenkins DSL on ${new Date()}')
 	scm {
 		git("https://github.com/monikaar/tutorials_practice.git",main)
 	}
