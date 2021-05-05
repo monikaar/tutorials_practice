@@ -1,0 +1,21 @@
+pipeline {
+	agent any
+	stages {
+		stage('Init') {
+			steps {
+			echo 'Hi this is the Demo Jenkins pipeline'
+			echo 'We are starting the testing'
+			}
+		}
+		stage('Build'){
+			steps {
+				echo 'Building sample maven project'
+			}
+		}
+		stage('Deploy'){
+			steps {
+				echo 'deploying in staging area'
+			}
+		}
+	}
+}
