@@ -1,17 +1,17 @@
 pipeline {
 	agent any
 	stages {
-		steps('Build Application') {
-			
+		stage('Build Application') {
+			steps {
 				sh 'mvn -f java-tomcat-sample/pom.xml clean package'
-			
+			}
 			post {
 				success {
 					echo "now archiving the artifacts"
 					archiveArtifacts artifacts: '**/*.war'
 				}
 			}
-			steps('Deploy in staging environment') {
+			stage('Deploy in staging environment') {
 				
 					build job: 'Deploy application in staging environment'
 				
